@@ -3,8 +3,11 @@ s.boot;
 // 1A College/Edinburgh
 {Pan2.ar(SinOsc.ar(440), 0.25)}.play;
 
+(
 // 1B College/Edinburgh
 x = {Pan2.ar(SinOsc.ar(440), -0.5)}.play;
+SystemClock.sched(5, { x.free });
+)
 
 // 2A West Loop
 {Pan2.ar(SinOsc.ar(659.25), -1)}.play;
