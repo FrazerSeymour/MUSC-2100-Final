@@ -96,21 +96,18 @@ SystemClock.sched(109, { k.free; k = Synth("Bus", ["freq", 293.66, "pan", -0.5])
 SystemClock.sched(167, { k.free });
 
 // 50 Stone Road Express
-SystemClock.sched(1, { l = Synth("Bus", ["freq", 440, "pan", -0.5]) });
-SystemClock.sched(10, { l.free; l = Synth("Bus", ["freq", 440, "pan", -0.5]) });
+SystemClock.sched(19.17, { l = Synth("Bus", ["freq", 440, "pan", -0.5]) });
+SystemClock.sched(142.2, { l.free });
 
 // 56 Victoria Express
-SystemClock.sched(1, { m = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
-SystemClock.sched(10, { m.free; m = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
-SystemClock.sched(10, { m.free });
+SystemClock.sched(19.25, { m = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
+SystemClock.sched(140.75, { m.free });
 
 // 57 Harvard Express
-SystemClock.sched(1, { n = Synth("Bus", ["freq", 440, "pan", -0.5]) });
-SystemClock.sched(10, { n.free; n = Synth("Bus", ["freq", 440, "pan", -0.5]) });
-SystemClock.sched(10, { n.free });
+SystemClock.sched(19, { n = Synth("Bus", ["freq", 440, "pan", -0.5]) });
+SystemClock.sched(148, { n.free });
 
 // 58 Edinburgh Express
-SystemClock.sched(1, { o = Synth("Bus", ["freq", 392, "pan", -0.25]) });
-SystemClock.sched(10, { o.free; o = Synth("Bus", ["freq", 392, "pan", -0.25]) });
-SystemClock.sched(10, { o.free });
+SystemClock.sched(19, { o = Synth("Bus", ["freq", 392, "pan", -0.25]) });
+SystemClock.sched(148, { o.free });
 )
