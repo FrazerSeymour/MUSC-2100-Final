@@ -1,7 +1,5 @@
 s.boot;
-
-// 1A College/Edinburgh
-{Pan2.ar(SinOsc.ar(440), 0.25)}.play;
+s.quit;
 
 (
 // Bus SynthDef
@@ -9,10 +7,12 @@ SynthDef("Bus", { arg freq = 440, pan = 0;
 	Out.ar(0, Pan2.ar(SinOsc.ar(freq), pan));
 }).send(s);
 
+// 1A College/Edinburgh
+{Pan2.ar(SinOsc.ar(440), 0.25)}.play;
+
 // 1B College/Edinburgh
 x = Synth("Bus", ["freq", 440, "pan", -0.5]);
 SystemClock.sched(5, { x.free });
-)
 
 // 2A West Loop
 {Pan2.ar(SinOsc.ar(659.25), -1)}.play;
@@ -52,6 +52,4 @@ SystemClock.sched(5, { x.free });
 
 // 58 Edinburgh Express
 {Pan2.ar(SinOsc.ar(392), -0.25)}.play;
-
-
-s.quit;
+)
