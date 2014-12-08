@@ -9,8 +9,8 @@ s.boot;
  *********/
 (
 // Bus SynthDef
-SynthDef("Bus", { arg freq = 440, pan = 0;
-	Out.ar(0, Pan2.ar(SinOsc.ar(freq), pan));
+SynthDef("Bus", { arg freq = 440, pan = 0, vol = 0.33;
+	Out.ar(0, Pan2.ar(SinOsc.ar(freq, mul:SinOsc.kr(vol, -1.57, 1, 1)), pan));
 }).send(s);
 
 // Stolen from Help - this will record to the disk
