@@ -4,8 +4,13 @@ s.boot;
 {Pan2.ar(SinOsc.ar(440), 0.25)}.play;
 
 (
+// Bus SynthDef
+SynthDef("Bus", { arg freq = 440, pan = 0;
+	Out.ar(0, Pan2.ar(SinOsc.ar(freq), pan));
+}).send(s);
+
 // 1B College/Edinburgh
-x = {Pan2.ar(SinOsc.ar(440), -0.5)}.play;
+x = Synth("Bus", ["freq", 440, "pan", -0.5]);
 SystemClock.sched(5, { x.free });
 )
 
