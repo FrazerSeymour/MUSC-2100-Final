@@ -8,48 +8,63 @@ SynthDef("Bus", { arg freq = 440, pan = 0;
 }).send(s);
 
 // 1A College/Edinburgh
-{Pan2.ar(SinOsc.ar(440), 0.25)}.play;
+
+a = Synth("Bus", ["freq", 440, "pan", 0.25]);
+SystemClock.sched(5, { a.free });
 
 // 1B College/Edinburgh
-x = Synth("Bus", ["freq", 440, "pan", -0.5]);
-SystemClock.sched(5, { x.free });
+b = Synth("Bus", ["freq", 440, "pan", -0.5]);
+SystemClock.sched(5, { b.free });
 
 // 2A West Loop
-{Pan2.ar(SinOsc.ar(659.25), -1)}.play;
+c = Synth("Bus", ["freq", 659.25, "pan", -1]);
+SystemClock.sched(5, { c.free });
 
 // 2B West Loop
-{Pan2.ar(SinOsc.ar(880), -0.75)}.play;
+d = Synth("Bus", ["freq", 880, "pan", -0.75]);
+SystemClock.sched(5, { d.free });
 
 // 3A West Loop
-{Pan2.ar(SinOsc.ar(880), 0)}.play;
+e = Synth("Bus", ["freq", 880, "pan", 0]);
+SystemClock.sched(5, { e.free });
 
 // 3B West Loop
-{Pan2.ar(SinOsc.ar(659.25), 1)}.play;
+f = Synth("Bus", ["freq", 659.25, "pan", 1]);
+SystemClock.sched(5, { f.free });
 
 // 5 Gordon
-{Pan2.ar(SinOsc.ar(293.66), 0.5)}.play;
+g = Synth("Bus", ["freq", 293.66, "pan", 0.5]);
+SystemClock.sched(5, { g.free });
 
 // 6 Harvard/Ironwood
-{Pan2.ar(SinOsc.ar(392), -0.5)}.play;
+h = Synth("Bus", ["freq", 392, "pan", -0.5]);
+SystemClock.sched(5, { h.free });
 
 // 7 Kortwright/Downey
-{Pan2.ar(SinOsc.ar(392), -0.75)}.play;
+i = Synth("Bus", ["freq", 392, "pan", -0.75]);
+SystemClock.sched(5, { i.free });
 
 // 15 University/College
-{Pan2.ar(SinOsc.ar(440), -0.75)}.play;
+j = Synth("Bus", ["freq", 440, "pan", -0.75]);
+SystemClock.sched(5, { j.free });
 
 // 16 Southgate
-{Pan2.ar(SinOsc.ar(293.66), -0.5)}.play;
+k = Synth("Bus", ["freq", 293.66, "pan", -0.5]);
+SystemClock.sched(5, { k.free });
 
 // 50 Stone Road Express
-{Pan2.ar(SinOsc.ar(440), -0.5)}.play;
+l = Synth("Bus", ["freq", 440, "pan", -0.5]);
+SystemClock.sched(5, { l.free });
 
 // 56 Victoria Express
-{Pan2.ar(SinOsc.ar(293.66), 0.5)}.play;
+m = Synth("Bus", ["freq", 293.66, "pan", 0.5]);
+SystemClock.sched(5, { m.free });
 
 // 57 Harvard Express
-{Pan2.ar(SinOsc.ar(440), -0.5)}.play;
+n = Synth("Bus", ["freq", 440, "pan", -0.5]);
+SystemClock.sched(5, { n.free });
 
 // 58 Edinburgh Express
-{Pan2.ar(SinOsc.ar(392), -0.25)}.play;
+o = Synth("Bus", ["freq", 392, "pan", -0.25]);
+SystemClock.sched(5, { o.free });
 )
