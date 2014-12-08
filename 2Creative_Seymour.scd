@@ -6,6 +6,11 @@ s.quit;
 SynthDef("Bus", { arg freq = 440, pan = 0;
 	Out.ar(0, Pan2.ar(SinOsc.ar(freq), pan));
 }).send(s);
+
+// Stolen from Help - this will record to the disk
+SynthDef("Diskout", {arg bufnum;
+	DiskOut.ar(bufnum, In.ar(0,2));
+}).send(s);
 )
 
 (
