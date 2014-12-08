@@ -26,7 +26,8 @@ SystemClock.sched(167, { b.free });
 // 2A West Loop
 SystemClock.sched(1, { c = Synth("Bus", ["freq", 659.25, "pan", -1]) });
 SystemClock.sched(10, { c.free; c = Synth("Bus", ["freq", 659.25, "pan", -1]) });
-SystemClock.sched(37, { c.free; c = Synth("Bus", ["freq", 659.25, "pan", -1]) });
+SystemClock.sched(40, { c.free });
+SystemClock.sched(41.5, { c = Synth("Bus", ["freq", 659.25, "pan", -1]) });
 SystemClock.sched(73, { c.free; c = Synth("Bus", ["freq", 659.25, "pan", -1]) });
 SystemClock.sched(109, { c.free; c = Synth("Bus", ["freq", 659.25, "pan", -1]) });
 SystemClock.sched(167, { c.free });
@@ -34,7 +35,8 @@ SystemClock.sched(167, { c.free });
 // 2B West Loop
 SystemClock.sched(1, { d = Synth("Bus", ["freq", 880, "pan", -0.75]) });
 SystemClock.sched(10, { d.free; d = Synth("Bus", ["freq", 880, "pan", -0.75]) });
-SystemClock.sched(37, { d.free; d = Synth("Bus", ["freq", 880, "pan", -0.75]) });
+SystemClock.sched(40, { d.free });
+SystemClock.sched(46, { d = Synth("Bus", ["freq", 880, "pan", -0.75]) });
 SystemClock.sched(73, { d.free; d = Synth("Bus", ["freq", 880, "pan", -0.75]) });
 SystemClock.sched(109, { d.free; d = Synth("Bus", ["freq", 880, "pan", -0.75]) });
 SystemClock.sched(167, { d.free });
@@ -42,7 +44,8 @@ SystemClock.sched(167, { d.free });
 // 3A West Loop
 SystemClock.sched(1, { e = Synth("Bus", ["freq", 880, "pan", 0]) });
 SystemClock.sched(10, { e.free; e = Synth("Bus", ["freq", 880, "pan", 0]) });
-SystemClock.sched(37, { e.free; e = Synth("Bus", ["freq", 880, "pan", 0]) });
+SystemClock.sched(40, { e.free });
+SystemClock.sched(46, { e = Synth("Bus", ["freq", 880, "pan", 0]) });
 SystemClock.sched(73, { e.free; e = Synth("Bus", ["freq", 880, "pan", 0]) });
 SystemClock.sched(109, { e.free; e = Synth("Bus", ["freq", 880, "pan", 0]) });
 SystemClock.sched(167, { e.free });
@@ -51,6 +54,7 @@ SystemClock.sched(167, { e.free });
 SystemClock.sched(1, { f = Synth("Bus", ["freq", 659.25, "pan", 1]) });
 SystemClock.sched(10, { f.free; f = Synth("Bus", ["freq", 659.25, "pan", 1]) });
 SystemClock.sched(37, { f.free; f = Synth("Bus", ["freq", 659.25, "pan", 1]) });
+SystemClock.sched(41.5, { f.free; f = Synth("Bus", ["freq", 659.25, "pan", 1]) });
 SystemClock.sched(73, { f.free; f = Synth("Bus", ["freq", 659.25, "pan", 1]) });
 SystemClock.sched(109, { f.free; f = Synth("Bus", ["freq", 659.25, "pan", 1]) });
 SystemClock.sched(167, { f.free });
@@ -58,9 +62,11 @@ SystemClock.sched(167, { f.free });
 // 5 Gordon
 SystemClock.sched(1, { g = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
 SystemClock.sched(10, { g.free; g = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
-SystemClock.sched(37, { g.free; g = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
+SystemClock.sched(40, { g.free });
+SystemClock.sched(41.5, { g = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
 SystemClock.sched(73, { g.free; g = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
-SystemClock.sched(109, { g.free; g = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
+SystemClock.sched(112, { g.free });
+SystemClock.sched(113.5, { g = Synth("Bus", ["freq", 293.66, "pan", 0.5]) });
 SystemClock.sched(167, { g.free });
 
 // 6 Harvard/Ironwood
@@ -88,12 +94,15 @@ SystemClock.sched(109, { j.free; j = Synth("Bus", ["freq", 440, "pan", -0.75]) }
 SystemClock.sched(167, { j.free });
 
 // 16 Southgate
-SystemClock.sched(1, { k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
-SystemClock.sched(10, { k.free; k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
-SystemClock.sched(37, { k.free; k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
-SystemClock.sched(73, { k.free; k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
-SystemClock.sched(109, { k.free; k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
-SystemClock.sched(167, { k.free });
+k = Synth("Bus", ["freq", 293.66, "pan", -0.5]);
+SystemClock.sched(9, { k.free });
+SystemClock.sched(11.5 , { k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
+SystemClock.sched(38.5, { k.free });
+SystemClock.sched(40.75, { k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
+SystemClock.sched(74.5, { k.free; k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
+SystemClock.sched(110.5, { k.free });
+SystemClock.sched(112.75, { k = Synth("Bus", ["freq", 293.66, "pan", -0.5]) });
+SystemClock.sched(166, { k.free });
 
 // 50 Stone Road Express
 SystemClock.sched(19.17, { l = Synth("Bus", ["freq", 440, "pan", -0.5]) });
