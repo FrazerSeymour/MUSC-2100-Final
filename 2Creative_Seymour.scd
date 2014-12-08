@@ -1,6 +1,11 @@
+/**********
+ * Step 1 *
+ *********/
 s.boot;
-s.quit;
 
+/**********
+ * Step 2 *
+ *********/
 (
 // Bus SynthDef
 SynthDef("Bus", { arg freq = 440, pan = 0;
@@ -13,6 +18,30 @@ SynthDef("Diskout", {arg bufnum;
 }).send(s);
 )
 
+
+/**********
+ * Step 3 *
+ *********/
+(
+z= Buffer.alloc(s, 65536, 2); // Allocate a disk I/O buffer
+z.write("C:\\Frazer\\2Creative_Seymour.aiff", "aiff", "int16", 0, 0, true); // Create an output file for this buffer, leave it open
+y = Synth.tail(nil, "Diskout", ["bufnum", z.bufnum]); // Create the diskout node
+)
+
+
+/**********
+ * Step 5 *
+ *********/
+(
+y.free;  // stop recording
+z.close; // close the buffer and the soundfile
+z.free;  // free the buffer
+s.quit;
+)
+
+/********
+ * Step 4
+ *******/
 (
 // 1A College/Edinburgh
 SystemClock.sched(1, { a = Synth("Bus", ["freq", 440, "pan", 0.25]) });
