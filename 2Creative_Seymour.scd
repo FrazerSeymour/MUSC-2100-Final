@@ -6,7 +6,9 @@ s.quit;
 SynthDef("Bus", { arg freq = 440, pan = 0;
 	Out.ar(0, Pan2.ar(SinOsc.ar(freq), pan));
 }).send(s);
+)
 
+(
 // 1A College/Edinburgh
 SystemClock.sched(1, { a = Synth("Bus", ["freq", 440, "pan", 0.25]) });
 SystemClock.sched(10, { a.free; a = Synth("Bus", ["freq", 440, "pan", 0.25]) });
