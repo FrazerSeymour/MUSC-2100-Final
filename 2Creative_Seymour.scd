@@ -25,7 +25,7 @@ SynthDef("Diskout", {arg bufnum;
  *********/
 (
 z= Buffer.alloc(s, 65536, 2); // Allocate a disk I/O buffer
-z.write("C:\\Frazer\\2Creative_Seymour.aiff", "aiff", "int16", 0, 0, true); // Create an output file for this buffer, leave it open
+z.write("C:\\Frazer\\2Creative_Seymour.aiff", "aiff", "int24", 0, 0, true); // Create an output file for this buffer, leave it open
 y = Synth.tail(nil, "Diskout", ["bufnum", z.bufnum]); // Create the diskout node
 )
 
